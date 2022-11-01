@@ -41,7 +41,23 @@ return require('packer').startup(function(use)
 
   -- Essential plugins here
   use("wbthomason/packer.nvim") -- Have packer manage itself
+  use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
+  use("nvim-lua/plenary.nvim") -- Useful lua functions used ny lots of plugins
+  use("nvim-tree/nvim-web-devicons") -- standard icon visual plugin used by many other plugins
 
+  -- Color
+  use("NvChad/nvim-colorizer.lua") -- visualize color as a block for color codes
+  -- use "ziontee113/color-picker.nvim"
+  use("nvim-colortils/colortils.nvim")
+
+  -- lualine a nvim status line use({
+  'nvim-lualine/lualine.nvim',
+  requires = { 
+    "nvim-tree/nvim-web-devicons", opt = true,
+    "arkav/lualine-lsp-progress",
+    }
+  })
+  
   -- Colorschemes
   use("lunarvim/onedarker.nvim")
   use("lunarvim/darkplus.nvim")
