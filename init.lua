@@ -5,4 +5,6 @@ require("local.packer")
 require("local.plugin.lualine")
 require("local.plugin.colorutils")
 require("local.plugin.colorizer")
+require("local.plugin.treesitter")
+
 
