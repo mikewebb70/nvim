@@ -45,8 +45,12 @@ return require('packer').startup(function(use)
   use("nvim-lua/plenary.nvim") -- Useful lua functions used ny lots of plugins
   use("nvim-tree/nvim-web-devicons") -- standard icon visual plugin used by many other plugins
 
-  -- lualine a nvim status line
-  use({
+  -- Color
+  use("NvChad/nvim-colorizer.lua") -- visualize color as a block for color codes
+  -- use "ziontee113/color-picker.nvim"
+  use("nvim-colortils/colortils.nvim")
+
+  -- lualine a nvim status line use({
   'nvim-lualine/lualine.nvim',
   requires = { 
     "nvim-tree/nvim-web-devicons", opt = true,
