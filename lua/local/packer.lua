@@ -42,6 +42,12 @@ return require('packer').startup(function(use)
   -- Essential plugins here
   use("wbthomason/packer.nvim") -- Have packer manage itself
 
+  -- Colorschemes
+  use("lunarvim/onedarker.nvim")
+  use("lunarvim/darkplus.nvim")
+  use("folke/tokyonight.nvim")
+  use("arcticicestudio/nord-vim")
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
