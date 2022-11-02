@@ -72,6 +72,9 @@ return require('packer').startup(function(use)
     end,
   }) 
 
+  -- file explorer
+  use("nvim-tree/nvim-tree.lua")
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
