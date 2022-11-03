@@ -10,14 +10,29 @@ end
 
 local tree_cb = nvim_tree_config.nvim_tree_callback
 
--- recommened settings from nvim-tee documnetation
-vim.g.loaded = 1
-vim.g.loaded_netrwPlugin = 1
-
 nvim_tree.setup {
+  disable_netrw = true,
+  hijack_netrw = true,
+  open_on_startup = false,
+  ignore_ft_on_setup = {
+    "dashboard",
+    "alpha",
+  },
+  auto_close = true,
+  open_on_tab = false,
+  update_cwd = true,
+  update_to_buf_dir = {
+    enable = true,
+    auto_open = true,
+  },
   update_focused_file = {
     enable = true,
     update_cwd = true,
+  },
+  git = {
+    enable = true,
+    ignore = true,
+    timeout = 500,
   },
   renderer = {
     root_folder_modifier = ":t",
