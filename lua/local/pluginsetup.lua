@@ -66,7 +66,7 @@ return require('packer').startup(function(use)
     }
   })
   
-  -- treesitter syntax hoghtlighting
+  -- treesitter syntax hightlighting
   use({
     "nvim-treesitter/nvim-treesitter",
     run = function()
@@ -76,6 +76,10 @@ return require('packer').startup(function(use)
   use("p00f/nvim-ts-rainbow") -- add rainbow pairs
   use("windwp/nvim-autopairs") -- add bracketing autopairs
 
+  -- Comments, surrounds and registers
+  use("tpope/vim-surround") -- Surround a word etc with comments, braces etc
+  use("vim-scripts/ReplaceWithRegister") -- Grab something and use to replace something else
+  use("numToStr/Comment.nvim") -- Commenting with gc
 
   -- Splits and tab managment
   use("christoomey/vim-tmux-navigator") -- Seamless navigation between tmux and vim
