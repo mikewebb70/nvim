@@ -73,9 +73,9 @@ return require('packer').startup(function(use)
       require("nvim-treesitter.install").update({ with_sync = true})
     end,
   }) 
-  use("p00f/nvim-ts-rainbow") -- add rainbow pairs
-  use("windwp/nvim-autopairs") -- add bracketing autopairs
-  use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
+  use({ "p00f/nvim-ts-rainbow", after = "nvim-treesitter" }) -- add rainbow pairs
+  use({ "windwp/nvim-autopairs", after = "nvim-cmp" }) -- add bracketing autopairs
+  use({ "windwp/nvim-ts-autotag", event = "InsertEnter", after = "nvim-treesitter" }) -- autoclose tags
 
   -- Comments, surrounds and registers
   use("tpope/vim-surround") -- Surround a word etc with comments, braces etc
