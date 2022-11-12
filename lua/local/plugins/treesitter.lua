@@ -30,7 +30,7 @@ config.setup({
 	-- enable autotagging (w/ nvim-ts-autotag plugin)
 	autotag = { enable = true },
 	-- enable autopairs (w/ autopair.nvim plugin)
-  	autopairs = true,
+  autopairs = { enable = true },
 	-- ensure these language parsers are installed
 	ensure_installed = {
 		"json",
@@ -46,10 +46,11 @@ config.setup({
     "bash",
 		"lua",
 		"vim",
+    "php",
 		"dockerfile",
 		-- "gitignore",
 	},
 	-- auto install above language parsers
 	auto_install = true,
-})
+}) 
 

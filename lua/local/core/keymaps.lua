@@ -25,7 +25,7 @@ key.set("n", "<leader>nh", ":nohl<CR>")             -- clear highlighted search 
 key.set("n", "<leader>sv", "<C-w>v")                -- split window vertically
 key.set("n", "<leader>sh", "<C-w>s")                -- split window horizontally
 key.set("n", "<leader>se", "<C-w>=")                -- make split windows equal width & height
-key.set("n", "<leader>sx", ":close<CR  >")          -- close current split window
+key.set("n", "<leader>sx", ":close<CR>")          -- close current split window
 
 
 key.set("v", "<Tab>", ">gv")                        -- Tab to increase indent of visual selection
@@ -46,3 +46,4 @@ key.set("n", "<leader>z", ":ZenMode<CR>", opts)     -- Toggle file explorer pane
 -- Navigate buffers
 key.set("n", "<S-l>", ":bnext<CR>", opts)
 key.set("n", "<S-h>", ":bprevious<CR>", opts)
+key.set("n", "<S-x>", ":bdelet!<CR>", opts)
