@@ -68,10 +68,6 @@ return require('packer').startup(function(use)
       require("nvim-treesitter.install").update({ with_sync = true})
     end,
   }) 
-  use({ "p00f/nvim-ts-rainbow", after = "nvim-treesitter" }) -- add rainbow pairs
-  use("windwp/nvim-autopairs") -- add bracketing autopairs
-  use("windwp/nvim-ts-autotag") -- autoclose tags
-
   -- Comments, surrounds and registers
   use("tpope/vim-surround") -- Surround a word etc with comments, braces etc
   use("vim-scripts/ReplaceWithRegister") -- Grab something and use to replace something else
@@ -107,9 +103,14 @@ return require('packer').startup(function(use)
 
   use("akinsho/bufferline.nvim")
 
+  use({ "p00f/nvim-ts-rainbow", after = "nvim-treesitter" }) -- add rainbow pairs
+  use("windwp/nvim-autopairs") -- add bracketing autopairs
+  use("windwp/nvim-ts-autotag") -- autoclose tags
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
     require('packer').sync()
   end
 end)
+
