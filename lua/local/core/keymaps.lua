@@ -45,3 +45,4 @@ key.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggle split window maximi
 -- nvim-tree
 key.set("n", "<leader>e", ":NvimTreeToggle<CR>")  -- Toggle file explorer pane
 
+key.set("n", "<leader>z", ":ZenMode<CR>")  -- Toggle file explorer pane
