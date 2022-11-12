@@ -52,11 +52,6 @@ return require('packer').startup(function(use)
   use("folke/tokyonight.nvim")
   use("arcticicestudio/nord-vim")
 
-  -- Color
-  use("NvChad/nvim-colorizer.lua") -- visualize color as a block for color codes
-  -- use "ziontee113/color-picker.nvim"
-  use("nvim-colortils/colortils.nvim")
-
   -- lua line a nvim status line
   use({
   'nvim-lualine/lualine.nvim',
@@ -101,6 +96,11 @@ return require('packer').startup(function(use)
   use("L3MON4D3/LuaSnip") -- snippet engine
   use("saadparwaiz1/cmp_luasnip") -- for autocompletion
   use("rafamadriz/friendly-snippets") -- useful snippets
+
+  -- Color
+  use("NvChad/nvim-colorizer.lua") -- visualize color as a block for color codes
+  -- use "ziontee113/color-picker.nvim"
+  use("nvim-colortils/colortils.nvim")
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

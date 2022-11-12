@@ -17,8 +17,7 @@ config.setup({
     extended_mode = true, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
     max_file_lines = nil, -- Do not enable for files with more than n lines, int
     colors = {   -- Nord aurora color pallet
-      "#4c566a",
-      "#bf616a",
+      "#ef616a",
       "#d08770",
       "#ebcb8b",
       "#a3be8c",
