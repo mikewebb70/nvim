@@ -1,4 +1,4 @@
--- auto install packer plugin manager if not install
+
 local ensure_packer = function()
   local fn = vim.fn
   local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
@@ -52,11 +52,6 @@ return require('packer').startup(function(use)
   use("folke/tokyonight.nvim")
   use("arcticicestudio/nord-vim")
 
-  -- Color
-  use("NvChad/nvim-colorizer.lua") -- visualize color as a block for color codes
-  -- use "ziontee113/color-picker.nvim"
-  use("nvim-colortils/colortils.nvim")
-
   -- lua line a nvim status line
   use({
   'nvim-lualine/lualine.nvim',
@@ -75,7 +70,7 @@ return require('packer').startup(function(use)
   }) 
   use({ "p00f/nvim-ts-rainbow", after = "nvim-treesitter" }) -- add rainbow pairs
   use("windwp/nvim-autopairs") -- add bracketing autopairs
-  use({ "windwp/nvim-ts-autotag", event = "InsertEnter", after = "nvim-treesitter" }) -- autoclose tags
+  use("windwp/nvim-ts-autotag") -- autoclose tags
 
   -- Comments, surrounds and registers
   use("tpope/vim-surround") -- Surround a word etc with comments, braces etc
@@ -102,6 +97,13 @@ return require('packer').startup(function(use)
   use("saadparwaiz1/cmp_luasnip") -- for autocompletion
   use("rafamadriz/friendly-snippets") -- useful snippets
 
+  -- Color
+  use("NvChad/nvim-colorizer.lua") -- visualize color as a block for color codes
+  -- use "ziontee113/color-picker.nvim"
+  use("nvim-colortils/colortils.nvim")
+
+  -- zen mode minimail editing
+  use("folke/zen-mode.nvim")
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
