@@ -137,19 +137,15 @@ cmp.setup {
     select = false,
   },
   window = {
-    documentation = {
-      border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-    },
-    completion = {
+    documentation = cmp.config.window.bordered(), 
+    completion = cmp.config.window.bordered({
       winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
       col_offset = -3,
       side_padding = 0,
-    },
+    }),
   },
   experimental = {
     ghost_text = false,
     native_menu = false,
   },
 }
-
-
