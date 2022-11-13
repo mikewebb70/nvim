@@ -108,7 +108,7 @@ return require('packer').startup(function(use)
 
   use("akinsho/bufferline.nvim")
 
-  use({ "p00f/nvim-ts-rainbow", after = "nvim-treesitter" }) -- add rainbow pairs
+  use("p00f/nvim-ts-rainbow") -- add rainbow pairs
   use("windwp/nvim-autopairs") -- add bracketing autopairs
   use("windwp/nvim-ts-autotag") -- autoclose tags
 
