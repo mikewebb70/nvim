@@ -45,7 +45,7 @@ opt.splitbelow = true                 -- split horizontal window to the bottom
 
 opt.iskeyword:append("-")             -- consider string-string as whole word
 
-opt.showcmd = false                   -- stop key press echoi ng into command line 
+opt.showcmd = false                   -- stop key press echoing into command line 
 
 -- stop automatic continue comments when new line
 vim.api.nvim_create_autocmd("BufEnter", { callback = function() 

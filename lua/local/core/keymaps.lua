@@ -26,6 +26,8 @@ key.set("n", "<leader>sv", "<C-w>v")                -- split window vertically
 key.set("n", "<leader>sh", "<C-w>s")                -- split window horizontally
 key.set("n", "<leader>se", "<C-w>=")                -- make split windows equal width & height
 key.set("n", "<leader>sx", ":close<CR>")          -- close current split window
+-- vim-maximizer
+key.set("n", "<leader>sm", ":MaximizerToggle<CR>", opts)  -- toggle split window maximization
 
 
 key.set("v", "<Tab>", ">gv")                        -- Tab to increase indent of visual selection
@@ -34,9 +36,6 @@ key.set("v", "<S-Tab>", "<gv")                      -- Shift-tab to decrease ind
 ----------------------
 -- Plugin Keybinds
 ----------------------
-
--- vim-maximizer
-key.set("n", "<leader>sm", ":MaximizerToggle<CR>", opts)  -- toggle split window maximization
 
 -- nvim-tree
 key.set("n", "<leader>e", ":NvimTreeToggle<CR>", opts)    -- Toggle file explorer pane
