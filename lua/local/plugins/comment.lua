@@ -1,5 +1,5 @@
-local status, comment = pcall(require, "Comment")
-if not comment then
+local status_ok, comment = pcall(require, "Comment")
+if not status_ok then
   return
 end
 
