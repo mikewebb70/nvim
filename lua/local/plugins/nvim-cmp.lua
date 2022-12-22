@@ -8,10 +8,6 @@ if not snip_status_ok then
   return
 end
 
-local has_words_before = function()
-  local line, col = unpack(vim.api.nvim_win_get_cursor(0))
-  return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
-end
 require("luasnip/loaders/from_vscode").lazy_load()
 
 local check_backspace = function()
@@ -57,7 +53,7 @@ cmp.setup {
     if vim.api.nvim_get_mode().mode == 'c' then
       return true
     else
-      return not context.in_treesitter_capture("comment") 
+      return not context.in_treesitter_capture("comment")
         and not context.in_syntax_group("Comment")
     end
   end,
@@ -137,7 +133,7 @@ cmp.setup {
     select = false,
   },
   window = {
-    documentation = cmp.config.window.bordered(), 
+    documentation = cmp.config.window.bordered(),
     completion = cmp.config.window.bordered({
       winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
       col_offset = -3,
